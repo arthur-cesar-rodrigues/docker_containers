@@ -13,7 +13,7 @@
 > [!IMPORTANT]
 > Para sair de um container basta digitar `exit`.
 
-<a src="https://github.com/tailwindtoolbox/Landing-Page/archive/master.zip">Link para download da Landing Page TailwindCSS<a>
+<a href="https://github.com/tailwindtoolbox/Landing-Page/archive/master.zip">Link para download da Landing Page TailwindCSS<a>
 
 * Abrir bash do Ubuntu (WSL) e digitar os comandos:
 
@@ -36,7 +36,7 @@ docker run --name tailwindcss-nginx -v ./:/usr/share/nginx/html:ro -d -p 80:80 n
 ```
 * Copiar o ip do host (`ip a` - copiar o ip da interface de rede eth0), digitar no navegador http://iphost:80.
 
-des1
+<img src="./imagens/des1.png">
 
 2. Criando um contêiner Ubuntu com um script que atualiza os pacotes do contêiner Ubuntu ou imprime os logs
 
@@ -71,7 +71,7 @@ script_ubuntu.sh
  
 `docker ps`
 
-ger1
+<img src="./imagens/ger1.png"></img>
 
 * Imprimindo as configurações detalhadas do container (rede, volumes, versão da imagem, entre outros).
 
@@ -81,33 +81,33 @@ ger1
 
 `docker stop nome_container ou id_container`
 
-ger2
+<img src="./imagens/ger2.png"></img>
 
 * Listando containers parados
 
 `docker ps -a`
 
-ger3
+<img src="./imagens/ger3.png"></img>
 
 * Removendo um container parado.
 
 `docker rm nome_container ou id_container`
 
-ger4
+<img src="./imagens/ger4.png"></img>
 
 * Removendo um container em execução.
 
 `docker rm -f nome_container ou id_container`
 
-ger5
+<img src="./imagens/ger5.png"></img>
 
 4. Criando um Dockerfile para uma aplicação Flask acessando pelo endpoint (rotas).
 
-<a src="./python/app.py">Código python</a>
+<a href="./python/app.py">Código python</a>
 
-<a src="./python/requirements.txt">requiments</a>
+<a href="./python/requirements.txt">requiments</a>
 
-<a src="./Dockerfile_python/Dockerfile">Dockerfile</a>
+<a href="./Dockerfile_python/Dockerfile">Dockerfile</a>
 
 * Abrir bash do Ubuntu (WSL) e digitar os comandos:
 
