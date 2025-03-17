@@ -205,6 +205,9 @@ Dcokerfile
 
 * Abrir bash do Ubuntu (WSL) e digitar os comandos:
 
+<a href="https://github.com/creativetimofficial/material-kit.git">creative tim</a>
+
+<a href="./dockerfile_nginx/Dockerfile">Dockerfile</a>
 ```
 cd desafios && mkdir desafio9
 cd desafio9
