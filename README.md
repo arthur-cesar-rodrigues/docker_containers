@@ -193,5 +193,32 @@ vi Dockerfile
 
 docker build -t app-go:1.0 .
 docker run --name app-go -ti app-go:1.0
+
+(inserir seu nome)
 ```
 
+link creative tim
+
+Dcokerfile
+
+9. Criando um container NGINX com a landing page do Creative Tim.
+
+* Abrir bash do Ubuntu (WSL) e digitar os comandos:
+
+```
+cd desafios && mkdir desafio9
+cd desafio9
+git clone (link creative tim)
+mv material_kit creative_tim
+cd creative_tim && vi Dockerfile
+
+(código docker file, salvar e sair)
+
+docker build -t nginx-creative:1.0 .
+docker run --name page_creative -d -p 80:80 ngi
+nx-creative:1.0 
+```
+
+* Acessar o navegador e digitar http://ip_host:80
+
+<img src="./imagens/nginx2.png"></img>
