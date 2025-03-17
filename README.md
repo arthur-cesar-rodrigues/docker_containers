@@ -105,7 +105,7 @@ script_ubuntu.sh
 
 <a href="./python/app.py">Código python</a>
 
-<a href="./python/requirements.txt">requiments</a>
+<a href="./python/requirements.txt">requirements.txt</a>
 
 <a href="./Dockerfile_python/Dockerfile">Dockerfile</a>
 
@@ -132,9 +132,66 @@ docker build ./ -t flask_container
 docker run --name app_flask -p 5000:5000 flask_container
 ```
 
-* Clicar em qualquer link que aparecer, e testar as rotas "\" e "\site".
+* Clicar em qualquer link que aparecer, e testar os endpoints(rotas) '\' e '\site'.
 
 <img src="./imagens/flask.png">
 
 <img src="./imagens/flask2.png">
+
+5. Criando um container MySql com um volume para persistencia dos dados.
+
+<a href="./dockercompose5/docker-compose.yml">docker-compose.yml</a>
+
+<a href="./phpmyadmin/upload.ini">upload.ini</a>
+
+* Abrir bash do Ubuntu (WSL) e digitar os comandos:
+
+```
+cd /desafios && mkdir desafio5
+cd desafio 5 && mkdir volume
+mkdir admin && cd admin
+vi upload.ini
+
+(upload.ini, salvar e sair)
+
+cd .. && mkdir compose
+cd composse && vi docker-compose.yml
+
+(docker_compose, salvar e sair)
+
+docker-compose up -d
+```
+
+* Acessar o phpmyadmin(http://localhost:8080), e criar tabelas e registros no schema desafio5
+
+```
+docker compose down
+cd ../volumee && ls (os dados do container do banco ficam salvos aqui)
+cd ../compose && docker-compose up -d
+```
+
+* Acessar o phpmyadmin novamente e vizualizar os inserts de registros feitos anteriormente.
+
+6. Criando um container Multi-Stage de uma aplicação Go com o Alpine.
+
+<a href="./appgo/app.go">app.go</a>
+
+<a href="./dockerfile_go/Dockerfile">Dockerfile</a>
+
+* Abrir bash do Ubuntu (WSL) e digitar os comandos:
+
+```
+cd /desafios && mkdir desafio6
+cd desafio6 && mkdir go
+cd go && vi app.go
+
+(app.go, salvar e sair)
+
+vi Dockerfile
+
+(Dockerfile, salvar e sair)
+
+docker build -t app-go:1.0 .
+docker run --name app-go -ti app-go:1.0
+```
 
